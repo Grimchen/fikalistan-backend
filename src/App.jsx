@@ -137,9 +137,13 @@ export default function App() {
         </button>
       </form>
 
-      <section aria-live="polite">
-        <h2>På listan</h2>
-        {laddar && <p className="info">Laddar fikalistan…</p>}
+      <section aria-labelledby="listrubrik" aria-busy={laddar}>
+        <h2 id="listrubrik">På listan</h2>
+        {laddar && (
+          <p className="info" role="status">
+            Laddar fikalistan…
+          </p>
+        )}
         {listfel && (
           <p className="fel" role="alert">
             {listfel}{' '}
@@ -149,7 +153,9 @@ export default function App() {
           </p>
         )}
         {!laddar && !listfel && poster.length === 0 && (
-          <p className="info">Ingen har skrivit upp sig än. Bli först! 🥐</p>
+          <p className="info" role="status">
+            Ingen har skrivit upp sig än. Bli först! 🥐
+          </p>
         )}
         <ul className="lista">
           {poster.map((p) => (
