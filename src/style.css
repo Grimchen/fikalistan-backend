@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #fff4e0;
+  color: #4a2c12;
+}
+
+.sida {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
