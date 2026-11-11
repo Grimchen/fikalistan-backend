@@ -1,12 +1,127 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: system-ui, sans-serif;
-  background: #fff4e0;
+  background: linear-gradient(#ffe9c2, #fff4e0 18rem);
+  background-attachment: fixed;
   color: #4a2c12;
 }
 
 .sida {
   max-width: 40rem;
   margin: 0 auto;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 1rem 3rem;
+}
+
+.topp h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #c2410c;
+}
+
+.topp p {
+  margin: 0.25rem 0 1.25rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin: 1.5rem 0 0.75rem;
+}
+
+.kort {
+  background: #fff;
+  border: 2px solid #fbbf77;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 2px 0 #fbbf77;
+}
+
+form.kort {
+  display: grid;
+  gap: 0.75rem;
+}
+
+label {
+  display: grid;
+  gap: 0.25rem;
+  font-weight: 600;
+}
+
+input {
+  font: inherit;
+  padding: 0.65rem 0.75rem;
+  border: 2px solid #e8c9a0;
+  border-radius: 0.6rem;
+  background: #fffaf2;
+  color: inherit;
+}
+
+input:focus-visible,
+button:focus-visible {
+  outline: 3px solid #f97316;
+  outline-offset: 2px;
+}
+
+button {
+  font: inherit;
+  font-weight: 700;
+  padding: 0.7rem 1rem;
+  border: 0;
+  border-radius: 0.6rem;
+  background: #ea580c;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  background: #c2410c;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+button.liten {
+  padding: 0.4rem 0.75rem;
+  font-size: 0.9rem;
+}
+
+button.fara {
+  background: #fff;
+  color: #b91c1c;
+  border: 2px solid #b91c1c;
+}
+
+button.fara:hover:not(:disabled) {
+  background: #fee2e2;
+}
+
+.lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.post {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  overflow-wrap: anywhere;
+}
+
+.info {
+  margin: 0.5rem 0;
+}
+
+.fel {
+  color: #b91c1c;
+  font-weight: 600;
+  margin: 0.25rem 0;
 }
