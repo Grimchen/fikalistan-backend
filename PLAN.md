@@ -52,7 +52,7 @@ Varje steg görs i en egen session, på en egen branch, och blir en egen pull re
 - [x] **Steg 3 – GitHub Actions.** `.github/workflows/test.yml` på `pull_request` (Node LTS, `npm ci`, `npm test`). *Klart när:* workflowet är grönt på sin egen pull request.
 - [x] **Steg 4 – Databas och Supabase-koppling.** `supabase init`/`link`, migration med RLS, `supabase db push`, `repo.supabase.js`. Användaren klistrar in nyckeln i `.env` själv. *Klart när:* `curl` mot `npm run dev` skapar, listar och tar bort en post, posten finns kvar efter omstart av servern och tabellen har RLS på.
 - [x] **Steg 5 – Gränssnitt.** Formulär (namn ihågkommet), lista med senaste först, Ta bort-knapp bara på egna poster, lägen för tomt/laddar/fel, glad design med varma färger, mobilanpassat. *Klart när:* hela flödet fungerar i webbläsaren på mobilbredd och två webbläsare ser samma lista.
-- [ ] **Steg 6 – Putsning.** README (installation, `.env`, kommandon), genomgång av felmeddelanden och tillgänglighet. *Klart när:* en ny person kan köra appen enbart med README.
+- [x] **Steg 6 – Putsning.** README (installation, `.env`, kommandon), genomgång av felmeddelanden och tillgänglighet. *Klart när:* en ny person kan köra appen enbart med README.
 
 ## Att tänka på
 
