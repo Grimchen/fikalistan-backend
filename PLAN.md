@@ -47,7 +47,7 @@ Validering (400, svenska felmeddelanden): ogiltig JSON, `namn`/`vad` måste vara
 Varje steg görs i en egen session, på en egen branch, och blir en egen pull request.
 
 - [x] **Steg 0 – Repo och dokument.** PLAN.md, AGENTS.md, .gitignore, publikt repo `fikalistan-backend` pushat. *Klart när:* repot syns på GitHub med dessa filer.
-- [ ] **Steg 1 – Projektgrund.** package.json (ESM), Express + Vite middleware, React-skal, `.env.example`, build/start. *Klart när:* `npm run dev` visar en sida på http://localhost:3000 och `/api/halsa` svarar 200; `npm run build && npm start` gör detsamma.
+- [x] **Steg 1 – Projektgrund.** package.json (ESM), Express + Vite middleware, React-skal, `.env.example`, build/start. *Klart när:* `npm run dev` visar en sida på http://localhost:3000 och `/api/halsa` svarar 200; `npm run build && npm start` gör detsamma.
 - [ ] **Steg 2 – API, validering och tester.** `createApp`, routes, validering, fake-repo, `node --test`. *Klart när:* `npm test` går grönt utan `.env` och täcker alla statuskoder i API-tabellen.
 - [ ] **Steg 3 – GitHub Actions.** `.github/workflows/test.yml` på `pull_request` (Node LTS, `npm ci`, `npm test`). *Klart när:* workflowet är grönt på sin egen pull request.
 - [ ] **Steg 4 – Databas och Supabase-koppling.** `supabase init`/`link`, migration med RLS, `supabase db push`, `repo.supabase.js`. Användaren klistrar in nyckeln i `.env` själv. *Klart när:* `curl` mot `npm run dev` skapar, listar och tar bort en post, posten finns kvar efter omstart av servern och tabellen har RLS på.
