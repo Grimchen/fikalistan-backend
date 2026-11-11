@@ -2,7 +2,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import express from 'express';
 import { createApp } from './app.js';
-import { createMemoryRepo } from './repo.memory.js';
+import { createSupabaseRepo } from './repo.supabase.js';
 
 try {
   process.loadEnvFile();
@@ -14,8 +14,11 @@ const rot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const produktion = process.env.NODE_ENV === 'production';
 const port = Number(process.env.PORT) || 3000;
 
-// Tillfälligt repo i minnet. Supabase-kopplingen kommer i steg 4.
-const app = createApp({ repo: createMemoryRepo() });
+const repo = createSupabaseRepo({
+  url: process.env.SUPABASE_URL,
+  secretKey: process.env.SUPABASE_SECRET_KEY,
+});
+const app = createApp({ repo });
 
 if (produktion) {
   const dist = path.join(rot, 'dist');
